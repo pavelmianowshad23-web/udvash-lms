@@ -4,38 +4,109 @@
 <title>MCQ Exam</title>
 
 <style>
+
 body{
 font-family:Arial;
-padding:20px;
-background:#f4f4f4;
+background:#eef2f7;
+margin:0;
+padding:0;
 }
 
-.question{
-background:white;
-padding:15px;
-margin:10px 0;
-}
-
-button{
-padding:10px 20px;
+/* Header */
+.header{
 background:#0b5ed7;
 color:white;
-border:none;
-cursor:pointer;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
+
+.container{
+max-width:800px;
+margin:30px auto;
+}
+
+/* Question box */
+.question{
+background:white;
+padding:20px;
+margin-bottom:20px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Options */
+label{
+display:block;
+padding:10px;
+margin:5px 0;
+border-radius:5px;
+cursor:pointer;
+transition:0.3s;
+}
+
+input[type="radio"]{
+margin-right:10px;
+}
+
+/* Hover effect */
+label:hover{
+background:#e7f0ff;
+}
+
+/* Selected option */
+input[type="radio"]:checked + span{
+font-weight:bold;
+color:#0b5ed7;
+}
+
+/* Button */
+button{
+background:#0b5ed7;
+color:white;
+padding:12px 25px;
+border:none;
+border-radius:5px;
+font-size:16px;
+cursor:pointer;
+display:block;
+margin:20px auto;
+}
+
+/* Result */
+#result{
+text-align:center;
+margin-top:20px;
+font-size:20px;
+font-weight:bold;
+}
+
 </style>
 
 </head>
 
 <body>
 
-<h1>MCQ Exam</h1>
-<h3>Time Left: <span id="timer">60</span> seconds</h3>
+<div class="header">
+<h2>MCQ Exam</h2>
+<h3>Time Left: <span id="timer">60</span>s</h3>
+</div>
+
 <div class="question">
 <p>1. What is 2 + 2?</p>
-<input type="radio" name="q1" value="a"> 3<br>
-<input type="radio" name="q1" value="b"> 4<br>
-<input type="radio" name="q1" value="c"> 5<br>
+<label>
+<input type="radio" name="q1" value="a">
+<span>3</span>
+</label>
+<label>
+<input type="radio" name="q1" value="b">
+<span>4</span>
+</label>
+<label>
+<input type="radio" name="q1" value="c">
+<span>5</span>
+</label>
 </div>
 
 <div class="question">
