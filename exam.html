@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MCQ Exam</title>
+
+<style>
+body{
+font-family:Arial;
+padding:20px;
+background:#f4f4f4;
+}
+
+.question{
+background:white;
+padding:15px;
+margin:10px 0;
+}
+
+button{
+padding:10px 20px;
+background:#0b5ed7;
+color:white;
+border:none;
+cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>MCQ Exam</h1>
+
+<div class="question">
+<p>1. What is 2 + 2?</p>
+<input type="radio" name="q1" value="a"> 3<br>
+<input type="radio" name="q1" value="b"> 4<br>
+<input type="radio" name="q1" value="c"> 5<br>
+</div>
+
+<div class="question">
+<p>2. Capital of Bangladesh?</p>
+<input type="radio" name="q2" value="a"> Chittagong<br>
+<input type="radio" name="q2" value="b"> Dhaka<br>
+<input type="radio" name="q2" value="c"> Khulna<br>
+</div>
+
+<button onclick="checkResult()">Submit</button>
+
+<h2 id="result"></h2>
+
+<script>
+
+function checkResult(){
+let score = 0;
+
+let q1 = document.querySelector('input[name="q1"]:checked');
+let q2 = document.querySelector('input[name="q2"]:checked');
+
+if(q1 && q1.value == "b") score++;
+if(q2 && q2.value == "b") score++;
+
+document.getElementById("result").innerHTML =
+"Your Score: " + score + "/2";
+}
+
+</script>
+
+</body>
+</html>
