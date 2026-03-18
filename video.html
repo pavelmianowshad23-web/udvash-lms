@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Video Class</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+display:flex;
+}
+
+/* Sidebar playlist */
+.sidebar{
+width:250px;
+background:#f4f4f4;
+height:100vh;
+padding:20px;
+overflow:auto;
+}
+
+.sidebar h3{
+margin-top:0;
+}
+
+.lesson{
+margin:10px 0;
+padding:10px;
+background:white;
+cursor:pointer;
+}
+
+/* Main video area */
+.main{
+flex:1;
+padding:20px;
+}
+
+video{
+width:100%;
+max-width:800px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+<h3>Lessons</h3>
+
+<div class="lesson">Intro Class</div>
+<div class="lesson">Chapter 1</div>
+<div class="lesson">Chapter 2</div>
+<div class="lesson">Chapter 3</div>
+
+</div>
+
+<!-- Main Content -->
+<div class="main">
+
+<h2>Medical Admission - Intro Class</h2>
+
+<video controls>
+<source src="sample.mp4" type="video/mp4">
+Your browser does not support video
+</video>
+
+</div>
+
+</body>
+</html>
